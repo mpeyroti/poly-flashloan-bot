@@ -5,7 +5,7 @@ const readline = require("readline");
 export const initPriceTable = (p: Table, idx: number) => {
   baseTokens.forEach(async (baseToken) => {
     tradingTokens.forEach(async (tradingToken) => {
-      if (baseToken.address > tradingToken.address) {
+      if (baseToken.address != tradingToken.address) {
         p.addRow({
           index: idx,
 

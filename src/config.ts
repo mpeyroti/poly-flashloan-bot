@@ -1,9 +1,9 @@
 import { ERC20Token } from "./constants/addresses";
 
-export const renderInterval = 1 * 1000;
+export const renderInterval = 0.5 * 1000;
 
 // interval of price check (ms)
-export const interval = 4 * 1000;
+export const interval = 1 * 1000;
 
 export const loanAmount = 10000;
 export const diffAmount = 10; // Not enough amount to return loan
@@ -29,11 +29,13 @@ export const baseTokens = [
 ];
 
 export const tradingTokens = [
-  ERC20Token.DAI,
+  // ERC20Token.DAI,
   ERC20Token.WETH,
-  ERC20Token.USDC,
-  ERC20Token.USDT,
+  // ERC20Token.USDC,
+  // ERC20Token.USDT,
   ERC20Token.WMATIC,
+  ERC20Token.TEL,
+  // ERC20Token.WBTC,
 ];
 
 /**
@@ -42,7 +44,7 @@ export const tradingTokens = [
  * if you have deployed your own contract, you can use it instead of the default one
  */
 export const flashloanAddress: string =
-  "0x33d8d437796bd43bdccc6740c585f4a15d1070b7";
+  "0x5dc3c13c579FB8FB85f3981Be7E7e5213DD02890";
 
 /**
  * The bot can trade on UniswapV2 fork dexes(ex. SushiSwap) and UniswapV3
@@ -50,10 +52,10 @@ export const flashloanAddress: string =
  */
 // protocols the bot will use
 export const protocols =
-  "POLYGON_SUSHISWAP,POLYGON_QUICKSWAP,POLYGON_APESWAP,POLYGON_JETSWAP,POLYGON_WAULTSWAP,POLYGON_UNISWAP_V3";
+  "POLYGON_SUSHISWAP,POLYGON_QUICKSWAP,POLYGON_APESWAP,POLYGON_JETSWAP,POLYGON_WAULTSWAP";
 
 export const gasLimit = 15000000;
-export const gasPrice = 100; // gwei
+export const gasPrice = 200; // gwei
 
 export const routeParts = [
   [10000],

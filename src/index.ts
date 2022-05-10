@@ -42,7 +42,7 @@ export const main = async () => {
   baseTokens.forEach(async (baseToken) => {
     tradingTokens.forEach(async (tradingToken) => {
       // prevent swapping the same pair
-      if (baseToken.address > tradingToken.address) {
+      if (baseToken.address != tradingToken.address) {
         const i = idx;
 
         // await delay(interval / (baseTokens.length * tradingTokens.length) * i)
@@ -166,6 +166,10 @@ export const main = async () => {
         setInterval(func, interval);
 
         idx++;
+      } else {
+        console.log(
+          `invalid pair ${baseToken.symbol} -> ${tradingToken.symbol}`
+        );
       }
     });
   });

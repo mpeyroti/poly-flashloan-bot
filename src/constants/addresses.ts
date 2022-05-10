@@ -125,6 +125,22 @@ export const ERC20Token: erc20Token = {
     logoURI:
       "https://tokens.1inch.io/0x580a84c73811e1839f75d86d75d88cca0c241ff4.png",
   },
+  AVAX: {
+    symbol: "AVAX",
+    name: "Avalanche Token",
+    decimals: 18,
+    address: "0x2c89bbc92bd86f8075d1decc58c7f4e0107f286b",
+    logoURI:
+      "https://tokens.1inch.io/0x2c89bbc92bd86f8075d1decc58c7f4e0107f286b.png",
+  },
+  TEL: {
+    symbol: "TEL",
+    name: "Telcoin",
+    decimals: 2,
+    address: "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
+    logoURI:
+      "https://tokens.1inch.io/0x467bccd9d29f223bce8043b84e8c8b282827790f.png",
+  },
 };
 
 type PoolMap = { [pair: string]: string };
@@ -133,6 +149,7 @@ export const dodoV2Pool: PoolMap = {
   WETH_USDC: "0x5333Eb1E32522F1893B7C9feA3c263807A02d561",
   WMATIC_USDC: "0x10Dd6d8A29D489BEDE472CC1b22dc695c144c5c7",
   USDT_USDC: "0xA0020444b98f67B77a3d6dE6E66aF11c87da086e",
+  WBTC_USDC: "0xe020008465cd72301a18b97d33d73bf44858a4b7",
 };
 
 type RouterMap = { [protocol: string]: string };
